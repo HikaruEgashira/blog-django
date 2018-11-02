@@ -1,0 +1,40 @@
+{% extends "./_base.html" %}
+
+{% block content %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/post-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>{{post.title}}</h1>
+          <span class="meta">Posted by
+            <a href="../about">HikaruEgashira</a>
+            on {{post.published}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h2 class="section-heading">{{post.title}}</h2>
+        <p>{{post.body}}</p>
+        <img src="{{post.image.url}}" class="img-fluid" alt="postImage" style="height: 300px">
+
+        <!-- <p>Placeholder text by
+          <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
+          <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p> -->
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr>
+{% endblock %}
